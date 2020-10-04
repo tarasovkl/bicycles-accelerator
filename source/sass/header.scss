@@ -1,0 +1,65 @@
+h1 {
+  display: none;
+}
+
+.header {
+  min-height: 825px;
+  background-image: url("../img/bikebg-desktop@1x.jpg"), linear-gradient(#0d0d0d, #262626);
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "Open Sans", "Arial", sans-serif;
+}
+
+.container {
+  max-width: 909px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+.header__menu {
+  padding-top: 21px;
+  max-height: 62px;
+  margin-left: 33px;
+  margin-right: 43px;
+}
+.header__menu-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+.header__menu-item {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 32px;
+  text-align: center;
+  color: #ffffff;
+  opacity: 0.7;
+}
+.header__inner {
+  margin-top: 265px;
+  margin-left: 11px;
+  max-width: 395px;
+}
+
+.header__inner-logo {
+  display: block;
+  margin-bottom: 31px;
+}
+.header__inner-head {
+  margin: 0;
+  font-weight: bold;
+  font-size: 46px;
+  line-height: 64px;
+  color: #ffffff;
+}
+
+.header__inner-text {
+  margin: 0;
+  margin-top: 24px;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 32px;
+  color: #ffffff;
+  opacity: 0.8;
+}
