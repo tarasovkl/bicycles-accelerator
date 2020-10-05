@@ -10,6 +10,13 @@ h1 {
   font-family: "Open Sans", "Arial", sans-serif;
 }
 
+@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .header {
+    background: url("../img/bikebg-desktop@2x.jpg") center no-repeat;
+    background-size: 1440px auto;
+  }
+}
+
 .container {
   max-width: 909px;
   padding: 0 10px;
@@ -73,6 +80,14 @@ h1 {
     min-height: 340px;
     background-image: url("../img/bikebg-tablet@1x.jpg"), linear-gradient(#0d0d0d, #262626);
   }
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .header {
+      background: url("../img/bikebg-tablet@2x.jpg") center no-repeat, linear-gradient(#0d0d0d, #262626);
+      background-size: 767px auto;
+    }
+  }
+
   .container {
     max-width: 1023px;
     padding-left: 21px;
@@ -159,16 +174,24 @@ h1 {
     min-height: 390px;
     min-width: 320px;
     background-image: url("../img/bikebg-mobile@1x.jpg"), linear-gradient(#0d0d0d, #262626);
+    margin-top: 500px;
   }
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .header {
+      background: url("../img/bikebg-mobile@2x.jpg") center no-repeat, linear-gradient(#0d0d0d, #262626);
+      background-size: 320px auto;
+    }
+  }
+
   .container {
     padding-left: 16px;
   }
   .header__menu {
     position: absolute;
     left: 0;
-    top: 0;
+    top: -500px;
     margin: 0;
-
     background-color: #ffffff;
     max-height: 500px;
     padding: 0;
