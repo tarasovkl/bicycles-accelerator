@@ -39,7 +39,7 @@ h1 {
 .header__inner {
   margin-top: 265px;
   margin-left: 11px;
-  max-width: 395px;
+  width: 395px;
 }
 
 .header__inner-logo {
@@ -62,4 +62,177 @@ h1 {
   line-height: 32px;
   color: #ffffff;
   opacity: 0.8;
+}
+
+.header__inner-button {
+  display: none;
+}
+
+@media (max-width: $tablet-width) {
+  .header {
+    min-height: 340px;
+    background-image: url("../img/bikebg-tablet@1x.jpg"), linear-gradient(#0d0d0d, #262626);
+  }
+  .container {
+    max-width: 1023px;
+    padding-left: 21px;
+    padding-right: 0;
+    margin: 0;
+  }
+  .header__menu {
+    display: none;
+  }
+  .header__menu-list {
+  }
+  .header__menu-item {
+  }
+  .header__inner {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    margin-left: 0;
+    width: auto;
+  }
+  .header__inner-logo {
+    padding-top: 25px;
+    margin-bottom: 88px;
+  }
+  .header__inner-button {
+    display: block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: $cyan;
+    cursor: pointer;
+  }
+  .header__inner-block {
+    display: block;
+    width: 23px;
+    height: 1px;
+    background-color: #000000;
+    margin-top: 25px;
+    margin-left: 13.75px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 23px;
+      height: 1px;
+      background-color: #000000;
+      top: 19px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 23px;
+      height: 1px;
+      background-color: #000000;
+      top: 31px;
+    }
+  }
+
+  .header__inner-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .header__inner-head {
+    font-size: 30px;
+    line-height: 42px;
+    text-align: center;
+  }
+  .header__inner-text {
+    display: block;
+    align-self: center;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    width: 65%;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .header {
+    position: relative;
+    min-height: 390px;
+    min-width: 320px;
+    background-image: url("../img/bikebg-mobile@1x.jpg"), linear-gradient(#0d0d0d, #262626);
+  }
+  .container {
+    padding-left: 16px;
+  }
+  .header__menu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+
+    background-color: #ffffff;
+    max-height: 500px;
+    padding: 0;
+    padding-top: 100px;
+    width: 100%;
+    z-index: 9;
+
+    &--active {
+      display: block;
+    }
+  }
+  .header__menu-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .header__menu-list li {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .header__menu-item {
+    display: flex;
+    height: 60px;
+    width: 100%;
+    background-color: #f6f6f6;
+    font-size: 20px;
+    line-height: 28px;
+    color: #48494d;
+    padding-left: 16px;
+    text-align: left;
+    align-items: center;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 25px;
+      height: 25px;
+      background: url("../img/arrow.svg") center no-repeat;
+      left: calc(100% - 34px);
+    }
+  }
+  .header__inner-text {
+    width: 95%;
+  }
+
+  .header__inner-button {
+    &--active {
+      background-color: #ffffff;
+      z-index: 9;
+      background: url("../img/cross.svg") center no-repeat;
+    }
+  }
+
+  .header__inner-block--active {
+    display: none;
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
 }

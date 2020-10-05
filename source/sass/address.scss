@@ -1,0 +1,33 @@
+.address {
+}
+.address-container {
+  max-width: 957px;
+  margin: 0 auto;
+}
+.address__inner {
+  font-family: "Open Sans", "Arial", sans-serif;
+  text-align: center;
+}
+.address__head {
+  font-size: 30px;
+  line-height: 30px;
+  margin: 0;
+  color: #1f1f1f;
+  font-weight: 600;
+}
+.address__text {
+
+  margin-top: 30px;
+  margin-bottom: 41px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 31px;
+  color: rgba(0, 0, 0, 0.7);
+  width: 555px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.address__map {
+  background: url("../img/map-desktop@1x.jpg") center no-repeat;
+}

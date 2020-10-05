@@ -16,7 +16,7 @@
   <h1>Магазин велосипедов и аксессуаров</h1>
   <header class="header">
     <div class="container">
-      <nav class="header__menu">
+      <nav class="header__menu header__menu--active">
         <ul class="header__menu-list">
           <li><a class="header__menu-item" href="#">О нас</a></li>
           <li><a class="header__menu-item" href="#">Виды велосипедов</a></li>
@@ -25,7 +25,12 @@
         </ul>
       </nav>
       <div class="header__inner">
-        <a class="header__inner-logo" href="#"><img src="img/logo-desktop.svg" alt="Логотип"></a>
+        <div class="header__inner-wrapper">
+          <a class="header__inner-logo" href="#"><img src="img/logo-desktop.svg" alt="Логотип"></a>
+          <div class="header__inner-button header__inner-button--active">
+            <span class="header__inner-block header__inner-block--active"></span>
+          </div>
+        </div>
         <h2 class="header__inner-head">Мы продаем
           велосипеды</h2>
         <p class="header__inner-text">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
@@ -69,18 +74,22 @@
               <p>Дорожный велосипед</p>
             </div>
           </a>
-          <a href="#"><div class="types__item">
-            <picture>
-              <img src="img/mountainbike-desktop@1x.jpg" alt="Горный велосипед">
-            </picture>
+          <a href="#">
+            <div class="types__item">
+              <picture>
+                <img src="img/mountainbike-desktop@1x.jpg" alt="Горный велосипед">
+              </picture>
               <p>Горный велосипед</p>
-          </div></a>
-          <a href="#"><div class="types__item">
-            <picture>
-              <img src="img/childbike-desktop@1x.jpg" alt="Детский велосипед">
-            </picture>
+            </div>
+          </a>
+          <a href="#">
+            <div class="types__item">
+              <picture>
+                <img src="img/childbike-desktop@1x.jpg" alt="Детский велосипед">
+              </picture>
               <p>Детский велосипед</p>
-          </div></a>
+            </div>
+          </a>
         </div>
       </div>
     </section>

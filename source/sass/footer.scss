@@ -1,0 +1,37 @@
+.footer {
+  margin: 39px auto 98px auto;
+  display: flex;
+  justify-content: space-between;
+  width: 548px;
+  font-family: "Open Sans", "Arial", sans-serif;
+}
+
+.footer__mail {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.footer__mail a {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.footer__icon-mail {
+  margin-right: 15px;
+}
+.footer__tel {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.footer__tel a {
+  color: rgba(0, 0, 0, 0.5);
+
+}
+.footer__icon-phone {
+  margin-right: 15.5px;
+  background-color: #ffffff;
+}

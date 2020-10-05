@@ -23,7 +23,6 @@ main {
   margin-bottom: 20px;
 
   &::placeholder {
-    padding-left: 30px;
     font-weight: normal;
     font-size: 15px;
     color: #1c1c1c;
@@ -49,4 +48,27 @@ main {
   line-height: 21px;
   text-align: center;
   color: #000000;
+}
+
+@media (max-width: $tablet-width) {
+  .form {
+    max-width: 41.8%;
+    margin: 0 auto;
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+  .form__head {
+    color: #000000;
+    font-size: 18px;
+  }
+  .form__submit {
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .form {
+    margin-top: 70px;
+    max-width: 90%;
+  }
 }
