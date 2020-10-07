@@ -65,11 +65,15 @@
     </section>
     <section class="types">
       <div class="types__container">
+        <h3 class="types__head">Виды велосипедов</h3>
         <div class="types__inner">
           <a href="#">
             <div class="types__item">
               <picture>
-                <img src="img/roadbike-desktop@1x.jpg" alt="Дорожный велосипед">
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/roadbike-mobile@1x.webp 1x, img/roadbike-mobile@2x.webp 2x">
+                <source type="image/webp" srcset="img/roadbike-desktop@1x.webp 1x, img/roadbike-desktop@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="img/roadbike-mobile@1x.jpg 1x, img/roadbike-mobile@2x.jpg 2x">
+                <img src="img/roadbike-desktop@1x.jpg" srcset="img/roadbike-desktop@1x.jpg 1x, img/roadbike-desktop@2x.jpg 2x" alt="Дорожный велосипед">
               </picture>
               <p>Дорожный велосипед</p>
             </div>
@@ -77,7 +81,10 @@
           <a href="#">
             <div class="types__item">
               <picture>
-                <img src="img/mountainbike-desktop@1x.jpg" alt="Горный велосипед">
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/mountainbike-mobile@1x.webp 1x, img/mountainbike-mobile@2x.webp 2x">
+                <source type="image/webp" srcset="img/mountainbike-desktop@1x.webp 1x, img/mountainbike-desktop@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="img/mountainbike-mobile@1x.jpg 1x, img/mountainbike-mobile@2x.jpg 2x">
+                <img src="img/mountainbike-desktop@1x.jpg" srcset="img/mountainbike-desktop@1x.jpg 1x, img/mountainbike-desktop@2x.jpg 2x" alt="Горный велосипед">
               </picture>
               <p>Горный велосипед</p>
             </div>
@@ -85,7 +92,10 @@
           <a href="#">
             <div class="types__item">
               <picture>
-                <img src="img/childbike-desktop@1x.jpg" alt="Детский велосипед">
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/childbike-mobile@1x.webp 1x, img/childbike-mobile@2x.webp 2x">
+                <source type="image/webp" srcset="img/childbike-desktop@1x.webp 1x, img/childbike-desktop@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="img/childbike-mobile@1x.jpg 1x, img/childbike-mobile@2x.jpg 2x">
+                <img src="img/childbike-desktop@1x.jpg" srcset="img/childbike-desktop@1x.jpg 1x, img/childbike-desktop@2x.jpg 2x" alt="Детский велосипед">
               </picture>
               <p>Детский велосипед</p>
             </div>
@@ -96,13 +106,19 @@
     <section class="video">
       <div class="video__container">
         <div class="video__inner">
-          <h3 class="video__head">Видео про велосипеды</h3>
+          <h3 class="video__title">Видео про велосипеды</h3>
           <p class="video__about">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
           <div class="video__content">
             <picture>
-              <img class="video__bg" src="img/videobg-desktop@1x.jpg" alt="Изображения велосипеда">
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/videobg-mobile@1x.webp 1x, img/videobg-mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/videobg-tablet@1x.webp 1x, img/videobg-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/videobg-desktop@1x.webp 1x, img/videobg-desktop@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="img/videobg-mobile@1x.jpg 1x, img/videobg-mobile@2x.jpg 2x">
+              <source media="(max-width: 1023px)" srcset="img/videobg-tablet@1x.jpg 1x, img/videobg-tablet@2x.jpg 2x">
+              <img src="img/videobg-desktop@1x.jpg" srcset="img/videobg-desktop@1x.jpg 1x, img/videobg-desktop@2x.jpg 2x" alt="Изображения велосипеда">
             </picture>
-            <button class="video__content-btn"></button>
+            <button class="video__content-btn">
+            </button>
           </div>
         </div>
       </div>

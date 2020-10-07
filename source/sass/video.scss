@@ -1,0 +1,113 @@
+.video {
+  font-family: "Open Sans", "Arial", sans-serif;
+  min-height: 706px;
+  background-color: #131314;
+  margin-bottom: 249px;
+  position: relative;
+}
+.video__container {
+  max-width: 929px;
+  margin: 0 auto;
+}
+.video__inner {
+  padding-top: 120px;
+}
+.video__title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 30px;
+  color: #ffffff;
+}
+.video__about {
+  text-align: center;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 340px;
+  margin: 0 auto;
+}
+.video__content {
+  position: absolute;
+  content: "";
+  top: 282px;
+}
+
+.video__content-btn {
+  position: absolute;
+  content: "";
+  width: 65px;
+  height: 65px;
+  background-color: $cyan;
+  border-radius: 50%;
+  top: 229px;
+  left: 433px;
+  border: none;
+  cursor: pointer;
+  background-image: url("../img/icon-play.svg");
+  background-repeat: no-repeat;
+  background-position: 27px;
+}
+
+.video__icon-play {
+  margin-left: 5px;
+  margin-top: 2px;
+}
+
+@media (max-width: $tablet-width) {
+  .video {
+    min-height: 413px;
+    margin-bottom: 155px;
+  }
+  .video__container {
+    max-width: 503px;
+  }
+  .video__inner {
+    padding-top: 70px;
+  }
+  .video__title {
+    font-size: 24px;
+  }
+  .video__about {
+    max-width: 429px;
+  }
+  .video__content {
+    top: 216px;
+  }
+  .video__content-btn {
+    left: 215px;
+    top: 100px;
+    width: 90px;
+    height: 90px;
+    background-image: url("../img/icon-play-tablet.svg");
+    background-position: 39px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .video {
+    min-height: 384px;
+    min-width: 320px;
+    margin-bottom: 119px;
+  }
+  .video__container {
+    padding: 0 15px;
+    max-width: 320px;
+
+  }
+
+  .video__content {
+    top: 265px;
+  }
+  .video__content-btn {
+    width: 65px;
+    height: 65px;
+    background-image: url("../img/icon-play.svg");
+    background-position: 27px;
+    left: 120px;
+    top: 53px;
+  }
+}
