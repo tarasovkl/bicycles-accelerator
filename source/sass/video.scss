@@ -78,8 +78,8 @@
     top: 216px;
   }
   .video__content-btn {
-    left: 215px;
-    top: 100px;
+    left: 207px;
+    top: 96px;
     width: 90px;
     height: 90px;
     background-image: url("../img/icon-play-tablet.svg");
@@ -96,18 +96,21 @@
   .video__container {
     padding: 0 15px;
     max-width: 320px;
+  }
 
+  .video__inner {
+    padding-top: 85px;
   }
 
   .video__content {
-    top: 265px;
+    top: 272px;
   }
   .video__content-btn {
     width: 65px;
     height: 65px;
     background-image: url("../img/icon-play.svg");
     background-position: 27px;
-    left: 120px;
-    top: 53px;
+    left: 115px;
+    top: 50px;
   }
 }

@@ -2,13 +2,14 @@
   font-family: "Open Sans", "Arial", sans-serif;
   min-height: 1038px;
   background-color: #f6f7f9;
-  margin-top: 130px;
+  margin-top: 103px;
   padding-top: 150px;
 }
 .types__container {
-  max-width: 1246px;
-  padding: 0 60px;
+  max-width: 1266px;
+  padding: 0 70px;
   margin: 0 auto;
+  overflow: hidden;
 }
 .types__inner {
   display: flex;
@@ -23,14 +24,6 @@
   font-size: 22px;
   line-height: 34px;
   color: #000000;
-}
-
-.types__inner a {
-  padding-right: 30px;
-}
-
-.types__inner a:last-child {
-  padding-right: 0;
 }
 
 .types__inner a:nth-child(2) {
@@ -91,7 +84,7 @@
 }
 
 .types__item p {
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 0;
 }
 
@@ -109,16 +102,19 @@
   .types {
     min-height: auto;
     padding-top: 50px;
-    margin-top: 0;
+    margin-top: -22px;
   }
   .types__container {
+    padding: 0 40px;
   }
   .types__head {
     font-size: 24px;
     line-height: 41px;
+    margin-bottom: 29px;
   }
   .types__inner {
     justify-content: space-evenly;
+    padding-bottom: 24px;
   }
 
   .types__inner a:nth-child(1) {
@@ -145,7 +141,6 @@
   }
 
   .types__inner a:nth-child(3) {
-
     &::before {
       width: 68px;
       height: 68px;
@@ -167,6 +162,10 @@
 }
 
 @media (max-width: $mobile-width) {
+  .types {
+    margin-top: -15px;
+    overflow: hidden;
+  }
 
   .types__container {
     min-width: 320px;
@@ -184,14 +183,12 @@
   }
 
   .types__inner a:nth-child(1) {
-
     &::before {
       left: -25px;
     }
   }
 
   .types__inner a:nth-child(3) {
-
     &::before {
       left: 218px;
     }

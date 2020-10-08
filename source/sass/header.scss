@@ -18,7 +18,7 @@ h1 {
 }
 
 .container {
-  max-width: 909px;
+  max-width: 930px;
   padding: 0 10px;
   margin: 0 auto;
 }
@@ -34,6 +34,18 @@ h1 {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 107%;
+    height: 1px;
+    top: 40px;
+    left: -23px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
 }
 .header__menu-item {
   font-weight: 300;
@@ -42,10 +54,12 @@ h1 {
   text-align: center;
   color: #ffffff;
   opacity: 0.7;
+
+
 }
 .header__inner {
-  margin-top: 265px;
-  margin-left: 11px;
+  margin-top: 262px;
+  margin-left: 17px;
   width: 395px;
 }
 
@@ -53,7 +67,7 @@ h1 {
   display: block;
   margin-bottom: 31px;
 }
-.header__inner-head {
+.header__inner-title {
   margin: 0;
   font-weight: bold;
   font-size: 46px;
@@ -90,17 +104,13 @@ h1 {
 
   .container {
     max-width: 1023px;
-    padding-left: 21px;
     padding-right: 0;
     margin: 0;
   }
   .header__menu {
     display: none;
   }
-  .header__menu-list {
-  }
-  .header__menu-item {
-  }
+
   .header__inner {
     display: flex;
     flex-direction: column;
@@ -109,8 +119,9 @@ h1 {
     width: auto;
   }
   .header__inner-logo {
+    padding-left: 10px;
     padding-top: 25px;
-    margin-bottom: 88px;
+    margin-bottom: 85px;
   }
   .header__inner-button {
     display: block;
@@ -153,12 +164,14 @@ h1 {
     display: flex;
     justify-content: space-between;
   }
-  .header__inner-head {
+  .header__inner-title {
     font-size: 30px;
     line-height: 42px;
     text-align: center;
   }
   .header__inner-text {
+    padding-left: 5px;
+    margin-top: 20px;
     display: block;
     align-self: center;
     font-size: 18px;
@@ -175,6 +188,7 @@ h1 {
     min-width: 320px;
     background-image: url("../img/bikebg-mobile@1x.jpg"), linear-gradient(#0d0d0d, #262626);
     margin-top: 500px;
+
   }
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -184,9 +198,6 @@ h1 {
     }
   }
 
-  .container {
-    padding-left: 16px;
-  }
   .header__menu {
     position: absolute;
     left: 0;
@@ -196,7 +207,7 @@ h1 {
     max-height: 500px;
     padding: 0;
     padding-top: 100px;
-    width: 100%;
+    width: 98%;
     z-index: 9;
 
     &--active {
@@ -249,6 +260,10 @@ h1 {
       z-index: 9;
       background: url("../img/cross.svg") center no-repeat;
     }
+  }
+
+  .header__inner-logo {
+    margin-bottom: 70px;
   }
 
   .header__inner-block--active {
