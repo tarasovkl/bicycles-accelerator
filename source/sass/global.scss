@@ -6,10 +6,13 @@ html {
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
-ul, li {
+ul,
+li {
   list-style: none;
 }

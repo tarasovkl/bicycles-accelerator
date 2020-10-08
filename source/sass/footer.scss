@@ -21,6 +21,7 @@
 .footer__icon-mail {
   margin-right: 15px;
 }
+
 .footer__tel {
   display: flex;
   align-items: center;
@@ -32,6 +33,7 @@
 .footer__tel a {
   color: rgba(0, 0, 0, 0.5);
 }
+
 .footer__icon-phone {
   margin-right: 18.5px;
   background-color: #ffffff;
@@ -49,20 +51,17 @@
     width: auto;
     flex-wrap: wrap;
     margin: 27px auto 30px auto;
-
   }
+
   .footer__mail {
     justify-content: center;
     align-self: center;
     flex-grow: 1;
     margin-bottom: 20px;
-
   }
 
   .footer__tel {
     justify-content: center;
     flex-grow: 1;
-
   }
-
 }

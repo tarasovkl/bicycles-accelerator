@@ -22,12 +22,14 @@ h1 {
   padding: 0 10px;
   margin: 0 auto;
 }
+
 .header__menu {
   padding-top: 21px;
   max-height: 62px;
   margin-left: 33px;
   margin-right: 43px;
 }
+
 .header__menu-list {
   display: flex;
   justify-content: space-between;
@@ -45,8 +47,8 @@ h1 {
     left: -23px;
     background-color: rgba(255, 255, 255, 0.2);
   }
-
 }
+
 .header__menu-item {
   font-weight: 300;
   font-size: 16px;
@@ -54,9 +56,8 @@ h1 {
   text-align: center;
   color: #ffffff;
   opacity: 0.7;
-
-
 }
+
 .header__inner {
   margin-top: 262px;
   margin-left: 17px;
@@ -67,6 +68,7 @@ h1 {
   display: block;
   margin-bottom: 31px;
 }
+
 .header__inner-title {
   margin: 0;
   font-weight: bold;
@@ -107,8 +109,60 @@ h1 {
     padding-right: 0;
     margin: 0;
   }
+
   .header__menu {
     display: none;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin: 0;
+    background-color: #ffffff;
+    max-height: 500px;
+    padding: 0;
+    padding-top: 100px;
+    width: 50%;
+    z-index: 9;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  .header__menu-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .header__menu-item {
+    display: flex;
+    height: 60px;
+    width: 100%;
+    background-color: #f6f6f6;
+    font-size: 20px;
+    line-height: 28px;
+    color: #48494d;
+    padding-left: 16px;
+    text-align: left;
+    align-items: center;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 25px;
+      height: 25px;
+      background: url("../img/arrow.svg") center no-repeat;
+      left: calc(100% - 34px);
+    }
+
+    &:hover {
+      background-color: rgba(246, 246, 246, 0.2);
+    }
   }
 
   .header__inner {
@@ -118,11 +172,13 @@ h1 {
     margin-left: 0;
     width: auto;
   }
+
   .header__inner-logo {
     padding-left: 10px;
     padding-top: 25px;
     margin-bottom: 85px;
   }
+
   .header__inner-button {
     display: block;
     position: relative;
@@ -130,7 +186,16 @@ h1 {
     height: 50px;
     background-color: $cyan;
     cursor: pointer;
+
+    &--active {
+      background-color: #ffffff;
+      z-index: 9;
+      background-image: url("../img/cross.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
+
   .header__inner-block {
     display: block;
     width: 23px;
@@ -164,11 +229,13 @@ h1 {
     display: flex;
     justify-content: space-between;
   }
+
   .header__inner-title {
     font-size: 30px;
     line-height: 42px;
     text-align: center;
   }
+
   .header__inner-text {
     padding-left: 5px;
     margin-top: 20px;
@@ -179,6 +246,15 @@ h1 {
     text-align: center;
     width: 65%;
   }
+
+  .header__inner-block--active {
+    display: none;
+
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
 }
 
 @media (max-width: $mobile-width) {
@@ -188,7 +264,6 @@ h1 {
     min-width: 320px;
     background-image: url("../img/bikebg-mobile@1x.jpg"), linear-gradient(#0d0d0d, #262626);
     margin-top: 500px;
-
   }
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -199,25 +274,10 @@ h1 {
   }
 
   .header__menu {
-    position: absolute;
-    left: 0;
     top: -500px;
-    margin: 0;
-    background-color: #ffffff;
+    left: 0;
     max-height: 500px;
-    padding: 0;
-    padding-top: 100px;
-    width: 98%;
-    z-index: 9;
-
-    &--active {
-      display: block;
-    }
-  }
-  .header__menu-list {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    width: 100%;
   }
 
   .header__menu-list li {
@@ -228,49 +288,11 @@ h1 {
     }
   }
 
-  .header__menu-item {
-    display: flex;
-    height: 60px;
-    width: 100%;
-    background-color: #f6f6f6;
-    font-size: 20px;
-    line-height: 28px;
-    color: #48494d;
-    padding-left: 16px;
-    text-align: left;
-    align-items: center;
-    position: relative;
-
-    &::after {
-      position: absolute;
-      content: "";
-      width: 25px;
-      height: 25px;
-      background: url("../img/arrow.svg") center no-repeat;
-      left: calc(100% - 34px);
-    }
-  }
   .header__inner-text {
     width: 95%;
   }
 
-  .header__inner-button {
-    &--active {
-      background-color: #ffffff;
-      z-index: 9;
-      background: url("../img/cross.svg") center no-repeat;
-    }
-  }
-
   .header__inner-logo {
     margin-bottom: 70px;
-  }
-
-  .header__inner-block--active {
-    display: none;
-    &::after,
-    &::before {
-      display: none;
-    }
   }
 }

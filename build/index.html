@@ -18,10 +18,10 @@
     <div class="container">
       <nav class="header__menu header__menu--active">
         <ul class="header__menu-list">
-          <li><a class="header__menu-item" href="#">О нас</a></li>
-          <li><a class="header__menu-item" href="#">Виды велосипедов</a></li>
-          <li><a class="header__menu-item" href="#">Видео про велосипеды</a></li>
-          <li><a class="header__menu-item" href="#">Контакты</a></li>
+          <li><a class="header__menu-item" href="#facts">О нас</a></li>
+          <li><a class="header__menu-item" href="#types">Виды велосипедов</a></li>
+          <li><a class="header__menu-item" href="#video">Видео про велосипеды</a></li>
+          <li><a class="header__menu-item" href="#address">Контакты</a></li>
         </ul>
       </nav>
       <div class="header__inner">
@@ -39,12 +39,12 @@
   </header>
   <main>
     <form class="form" action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
-      <h4 class="form__head">Заполните поля ниже и мы подберем велосипед Вашей мечты</h4>
-      <input type="text" name="your-name" id="name" placeholder="Введите Ваше Имя" required="">
-      <input type="tel" name="your-tel" id="tel" placeholder="Введите Ваш номер телефона" required="">
+      <h4 class="form__title">Заполните поля ниже и мы подберем велосипед Вашей мечты</h4>
+      <input type="text" name="your-name" id="name" pattern="[A-Za-z]" placeholder="Введите Ваше Имя" required="">
+      <input type="tel" name="your-tel" id="tel" pattern="(\+?\d[- .]*){7,13}" title="Номер, от 7 до 13 знаков" placeholder="Введите Ваш номер телефона" required="">
       <button class="form__submit" type="submit">Подобрать велосипед мечты</button>
     </form>
-    <section class="facts">
+    <section class="facts" id="facts">
       <div class="facts__container">
         <h3 class="facts__title">Несколько фактов о нас</h3>
         <ul class="facts__list">
@@ -63,16 +63,18 @@
         </ul>
       </div>
     </section>
-    <section class="types">
+    <section class="types" id="types">
       <div class="types__container">
-        <h3 class="types__head">Виды велосипедов</h3>
+        <h3 class="types__title">Виды велосипедов</h3>
         <div class="types__inner">
           <a href="#">
             <div class="types__item">
               <picture>
                 <source type="image/webp" media="(max-width: 1023px)" srcset="img/roadbike-mobile@1x.webp 1x, img/roadbike-mobile@2x.webp 2x">
                 <source type="image/webp" srcset="img/roadbike-desktop@1x.webp 1x, img/roadbike-desktop@2x.webp 2x">
+                  <!-- 1х: 270px; 2x: 540px -->
                 <source media="(max-width: 1023px)" srcset="img/roadbike-mobile@1x.jpg 1x, img/roadbike-mobile@2x.jpg 2x">
+                  <!-- 1x: 342px; 2x: 684px -->
                 <img src="img/roadbike-desktop@1x.jpg" srcset="img/roadbike-desktop@1x.jpg 1x, img/roadbike-desktop@2x.jpg 2x" alt="Дорожный велосипед">
               </picture>
               <p>Дорожный велосипед</p>
@@ -83,7 +85,9 @@
               <picture>
                 <source type="image/webp" media="(max-width: 1023px)" srcset="img/mountainbike-mobile@1x.webp 1x, img/mountainbike-mobile@2x.webp 2x">
                 <source type="image/webp" srcset="img/mountainbike-desktop@1x.webp 1x, img/mountainbike-desktop@2x.webp 2x">
+                  <!-- 1х: 270px; 2x: 540px -->
                 <source media="(max-width: 1023px)" srcset="img/mountainbike-mobile@1x.jpg 1x, img/mountainbike-mobile@2x.jpg 2x">
+                  <!-- 1x: 342px; 2x: 684px -->
                 <img src="img/mountainbike-desktop@1x.jpg" srcset="img/mountainbike-desktop@1x.jpg 1x, img/mountainbike-desktop@2x.jpg 2x" alt="Горный велосипед">
               </picture>
               <p>Горный велосипед</p>
@@ -94,7 +98,9 @@
               <picture>
                 <source type="image/webp" media="(max-width: 1023px)" srcset="img/childbike-mobile@1x.webp 1x, img/childbike-mobile@2x.webp 2x">
                 <source type="image/webp" srcset="img/childbike-desktop@1x.webp 1x, img/childbike-desktop@2x.webp 2x">
+                  <!-- 1х: 270px; 2x: 540px -->
                 <source media="(max-width: 1023px)" srcset="img/childbike-mobile@1x.jpg 1x, img/childbike-mobile@2x.jpg 2x">
+                  <!-- 1x: 342px; 2x: 684px -->
                 <img src="img/childbike-desktop@1x.jpg" srcset="img/childbike-desktop@1x.jpg 1x, img/childbike-desktop@2x.jpg 2x" alt="Детский велосипед">
               </picture>
               <p>Детский велосипед</p>
@@ -103,7 +109,7 @@
         </div>
       </div>
     </section>
-    <section class="video">
+    <section class="video" id="video">
       <div class="video__container">
         <div class="video__inner">
           <h3 class="video__title">Видео про велосипеды</h3>
@@ -113,8 +119,11 @@
               <source type="image/webp" media="(max-width: 767px)" srcset="img/videobg-mobile@1x.webp 1x, img/videobg-mobile@2x.webp 2x">
               <source type="image/webp" media="(max-width: 1023px)" srcset="img/videobg-tablet@1x.webp 1x, img/videobg-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/videobg-desktop@1x.webp 1x, img/videobg-desktop@2x.webp 2x">
+                <!-- 1x: 288px; 2x: 576px -->
                 <source media="(max-width: 767px)" srcset="img/videobg-mobile@1x.jpg 1x, img/videobg-mobile@2x.jpg 2x">
+                  <!-- 1x: 503px; 2x: 1006px -->
               <source media="(max-width: 1023px)" srcset="img/videobg-tablet@1x.jpg 1x, img/videobg-tablet@2x.jpg 2x">
+                <!-- 1x: 929px; 2x: 1858px -->
               <img src="img/videobg-desktop@1x.jpg" srcset="img/videobg-desktop@1x.jpg 1x, img/videobg-desktop@2x.jpg 2x" alt="Изображения велосипеда">
             </picture>
             <button class="video__content-btn">
@@ -123,13 +132,13 @@
         </div>
       </div>
     </section>
-    <section class="address">
+    <section class="address" id="address">
       <div class="address-container">
         <div class="address__inner">
           <h3 class="address__head">Как нас найти?</h3>
           <p class="address__text">Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
           <div class="address__map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.1619905955367!2d30.32084686227864!3d59.93909465282492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1601771041232!5m2!1sru!2sru" width="100%" height="100%" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <iframe class="address__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.1619905955367!2d30.32084686227864!3d59.93909465282492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1601771041232!5m2!1sru!2sru" width="957" height="530" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
           </div>
         </div>
       </div>
@@ -143,12 +152,14 @@
       <a href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
     </div>
     <div class="footer__tel">
-      <svg class="footer__icon-phone" width="22" height="24">
+      <svg class="footer__icon-phone" width="22" height="23">
         <use xlink:href="img/sprite.svg#icon-tel"></use>
       </svg>
       <a href="tel:+749978468446">+7 (499)-784-684-46</a>
     </div>
   </footer>
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
