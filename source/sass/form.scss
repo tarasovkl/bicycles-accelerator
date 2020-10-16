@@ -10,12 +10,12 @@ main {
   padding-top: 20px;
   max-width: 327px;
   position: absolute;
-  left: 56%;
-  top: -674px;
+  left: 58%;
+  top: -673px;
 }
 
 .form input {
-  padding-left: 30px;
+  padding-left: 25px;
   font-weight: normal;
   height: 48px;
   border: 1px solid #c9ccd4;
@@ -52,6 +52,7 @@ main {
   line-height: 21px;
   text-align: center;
   color: #000000;
+  cursor: pointer;
 }
 
 @media (max-width: $tablet-width) {
@@ -81,6 +82,10 @@ main {
     margin-top: 40px;
     max-width: 90%;
     padding-top: 0;
+  }
+
+  .form input {
+    padding-left: 24px;
   }
 
   .form__title {

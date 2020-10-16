@@ -5,13 +5,17 @@
   width: 560px;
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: normal;
+  flex-wrap: wrap;
 }
 
 .footer__mail {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   font-size: 16px;
   line-height: 22px;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .footer__mail a {
@@ -25,9 +29,13 @@
 .footer__tel {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   font-size: 16px;
   line-height: 32px;
   flex-basis: 205px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding-left: 10px;
 }
 
 .footer__tel a {
@@ -54,13 +62,15 @@
   }
 
   .footer__mail {
+    margin-left: 5px;
     justify-content: center;
     align-self: center;
     flex-grow: 1;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 
   .footer__tel {
+    margin-left: -10px;
     justify-content: center;
     flex-grow: 1;
   }

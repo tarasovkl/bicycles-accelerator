@@ -55,6 +55,10 @@
   background-image: url("../img/icon-play.svg");
   background-repeat: no-repeat;
   background-position: 27px;
+
+  &:hover {
+    background-color: #0ad9a1;;
+  }
 }
 
 .video__icon-play {
@@ -108,6 +112,11 @@
   .video__container {
     padding: 0 15px;
     max-width: 320px;
+  }
+
+  .video__title {
+    margin-left: -10px;
+    letter-spacing: -0.005em;
   }
 
   .video__inner {

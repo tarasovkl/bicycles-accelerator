@@ -2,21 +2,21 @@
   font-family: "Open Sans", "Arial", sans-serif;
   min-height: 1038px;
   background-color: #f6f7f9;
-  margin-top: 103px;
+  margin-top: 83px;
   padding-top: 150px;
 }
 
 .types__container {
   max-width: 1266px;
-  padding-left: 80px;
-  padding-right: 60px;
+  padding-left: 60px;
+  padding-right: 10px;
   margin: 0 auto;
   overflow: hidden;
 }
 
 .types__inner {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   padding-bottom: 50px;
 }
@@ -27,6 +27,15 @@
   font-size: 22px;
   line-height: 34px;
   color: #000000;
+}
+
+.types__inner a {
+  margin-bottom: 30px;
+  margin-right: 25px;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .types__inner a:nth-child(2) {
@@ -98,7 +107,7 @@
   margin-top: 0;
   text-align: center;
   margin-bottom: 50px;
-  margin-left: -25px;
+  margin-left: -60px;
   color: #1f1f1f;
 }
 
@@ -117,11 +126,18 @@
     font-size: 24px;
     line-height: 41px;
     margin-bottom: 29px;
+    margin-left: 0;
   }
 
   .types__inner {
     justify-content: space-evenly;
-    padding-bottom: 24px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+  }
+
+  .types__inner a {
+    margin-right: 15px;
+    margin-left: 5px;
   }
 
   .types__inner a:nth-child(1) {
@@ -164,15 +180,17 @@
   }
 
   .types__item p {
-    margin-top: 10px;
+    margin-top: 12px;
     margin-bottom: 50px;
+    letter-spacing: -0.5px;
   }
 }
 
 @media (max-width: $mobile-width) {
   .types {
-    margin-top: -15px;
+    margin-top: -8px;
     overflow: hidden;
+    padding-bottom: 10px;
   }
 
   .types__container {
@@ -201,5 +219,9 @@
     &::before {
       left: 218px;
     }
+  }
+
+  .types__item p {
+    margin-bottom: 43px;
   }
 }

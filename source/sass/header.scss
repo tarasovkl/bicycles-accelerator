@@ -43,13 +43,14 @@ h1 {
     content: "";
     width: 107%;
     height: 1px;
-    top: 40px;
+    top: calc(100% + 9px);
     left: -23px;
     background-color: rgba(255, 255, 255, 0.2);
   }
 }
 
 .header__menu-item {
+  position: relative;
   font-weight: 300;
   font-size: 16px;
   line-height: 32px;
@@ -93,7 +94,9 @@ h1 {
 
 @media (max-width: $tablet-width) {
   .header {
+    position: relative;
     min-height: 340px;
+    margin-top: 500px;
     background-image: url("../img/bikebg-tablet@1x.jpg"), linear-gradient(#0d0d0d, #262626);
   }
 
@@ -113,14 +116,15 @@ h1 {
   .header__menu {
     display: none;
     position: absolute;
-    top: 0;
-    left: 50%;
+    content: "";
+    top: -500px;
+    min-height: 450px;
+    left: 0;
     margin: 0;
     background-color: #ffffff;
-    max-height: 500px;
     padding: 0;
     padding-top: 100px;
-    width: 50%;
+    width: 100%;
     z-index: 9;
 
     &--active {
@@ -150,6 +154,7 @@ h1 {
     text-align: left;
     align-items: center;
     position: relative;
+    margin-bottom: 30px;
 
     &::after {
       position: absolute;
@@ -264,24 +269,23 @@ h1 {
     min-width: 320px;
     background-image: url("../img/bikebg-mobile@1x.jpg"), linear-gradient(#0d0d0d, #262626);
     margin-top: 500px;
+    background-size: cover;
   }
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .header {
       background: url("../img/bikebg-mobile@2x.jpg") center no-repeat, linear-gradient(#0d0d0d, #262626);
-      background-size: 320px auto;
+      background-size: cover;
     }
   }
 
   .header__menu {
     top: -500px;
     left: 0;
-    max-height: 500px;
     width: 100%;
   }
 
   .header__menu-list li {
-    margin-bottom: 30px;
 
     &:last-child {
       margin-bottom: 0;
@@ -290,9 +294,16 @@ h1 {
 
   .header__inner-text {
     width: 95%;
+    padding-left: 0;
+    letter-spacing: -0.005em;
+    margin-left: -5px;
   }
 
   .header__inner-logo {
-    margin-bottom: 70px;
+    margin-bottom: 72px;
+  }
+
+  .header__inner-title {
+    margin-left: -8px;
   }
 }

@@ -36,7 +36,7 @@
   line-height: 34px;
   color: #000000;
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
 
   &::before {
     position: absolute;
@@ -82,15 +82,18 @@
   }
 
   .facts__list {
+    padding-left: 10px;
+    padding-right: 14px;
     margin-top: 86px;
     justify-content: space-around;
+    letter-spacing: -0.5px;
   }
 
   .facts__item {
     margin-bottom: 93px;
 
     &:nth-child(odd) {
-      padding-left: 5px;
+      padding-left: 7px;
     }
   }
 }
@@ -104,7 +107,8 @@
 
 
     &::before {
-      left: 130px;
+      left: 125px;
+      top: -47px;
     }
 
     &--bg1 {
