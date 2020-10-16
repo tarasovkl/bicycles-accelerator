@@ -30,6 +30,14 @@ main {
     color: #1c1c1c;
     opacity: 0.5;
   }
+
+  &:hover {
+    border: 1px solid $cyan;
+  }
+
+  &:focus {
+    background-color: rgba(230, 230, 230, 0.5);
+  }
 }
 
 .form__title {
@@ -79,7 +87,7 @@ main {
 
 @media (max-width: $mobile-width) {
   .form {
-    margin-top: 40px;
+    margin-top: 38px;
     max-width: 90%;
     padding-top: 0;
   }

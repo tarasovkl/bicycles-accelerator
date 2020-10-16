@@ -8,15 +8,15 @@
 
 .types__container {
   max-width: 1266px;
-  padding-left: 60px;
-  padding-right: 10px;
+  padding-left: 70px;
+  padding-right: 20px;
   margin: 0 auto;
   overflow: hidden;
 }
 
 .types__inner {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   flex-wrap: wrap;
   padding-bottom: 50px;
 }
@@ -136,6 +136,7 @@
   }
 
   .types__inner a {
+    margin-bottom: 0;
     margin-right: 15px;
     margin-left: 5px;
   }
@@ -195,12 +196,13 @@
 
   .types__container {
     min-width: 320px;
-    padding: 0 25px;
+    padding: 0 20px;
   }
 
   .types__inner {
     padding-bottom: 0;
     justify-content: space-around;
+    padding-left: 0;
   }
 
   .types__inner a {
