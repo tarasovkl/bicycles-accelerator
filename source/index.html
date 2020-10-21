@@ -17,9 +17,9 @@
   <div style="display: none">
     <include src="build/img/sprite.svg"></include>
   </div>
-  <h1>Магазин велосипедов и аксессуаров</h1>
   <header class="header">
     <div class="container">
+      <h1>Магазин велосипедов и аксессуаров</h1>
       <nav class="header__menu header__menu--active">
         <ul class="header__menu-list">
           <li><a class="header__menu-item" href="#facts">О нас</a></li>
@@ -29,49 +29,56 @@
         </ul>
       </nav>
       <div class="header__inner">
-        <div class="header__inner-wrapper">
+        <div class="header__inner-wrapperlogo">
           <a class="header__inner-logo"><img src="img/logo-desktop.svg" alt="Логотип"></a>
-          <div class="header__inner-button header__inner-button--active">
+          <button class="header__inner-button header__inner-button--active" disabled>
             <span class="header__inner-block header__inner-block--active"></span>
-          </div>
+          </button>
         </div>
-        <h2 class="header__inner-title">Мы продаем
-          велосипеды</h2>
-        <p class="header__inner-text">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+        <div class="header__wrapper">
+          <div class="header__inner-wrapper">
+            <h2 class="header__inner-title">Мы продаем
+              велосипеды</h2>
+            <p class="header__inner-text">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+          </div>
+          <form class="form" action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
+            <h2 class="form__title">Заполните поля ниже и мы подберем велосипед Вашей мечты</h2>
+            <label for="name">Ваше Имя</label>
+            <input type="text" name="your-name" id="name" pattern="[A-Za-zА-Яа-я]+" placeholder="Введите Ваше Имя"
+              required>
+            <label for="tel">Номер телефона</label>
+            <input type="tel" name="your-tel" id="tel" pattern="(\+?\d[- .]*){7,13}" title='Номер, от 7 до 13 знаков'
+              placeholder="Введите Ваш номер телефона" required>
+            <button type="submit">Подобрать велосипед мечты</button>
+          </form>
+        </div>
       </div>
     </div>
   </header>
   <main>
-    <form class="form" action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
-      <h4 class="form__title">Заполните поля ниже и мы подберем велосипед Вашей мечты</h4>
-      <label for="name"></label>
-      <input type="text" name="your-name" id="name" pattern="[A-Za-zА-Яа-я]+" placeholder="Введите Ваше Имя" required>
-      <label for="tel"></label>
-      <input type="tel" name="your-tel" id="tel" pattern="(\+?\d[- .]*){7,13}" title='Номер, от 7 до 13 знаков' placeholder="Введите Ваш номер телефона" required>
-      <button class="form__submit" type="submit">Подобрать велосипед мечты</button>
-    </form>
+
     <section class="facts" id="facts">
       <div class="facts__container">
-        <h3 class="facts__title">Несколько фактов о нас</h3>
+        <h2 class="facts__title">Несколько фактов о нас</h2>
         <ul class="facts__list">
           <li class="facts__item facts__item--bg1">
-            <p>Самый широкий выбор велосипедов!</p>
+            Самый широкий выбор велосипедов!
           </li>
           <li class="facts__item facts__item--bg2">
-            <p>Доставка велосипедов по всей России!</p>
+            Доставка велосипедов по всей России!
           </li>
           <li class="facts__item facts__item--bg3">
-            <p>Большой выбор крутых аксессуаров!</p>
+            Большой выбор крутых аксессуаров!
           </li>
           <li class="facts__item facts__item--bg4">
-            <p>Профессиональные консультации!</p>
+            Профессиональные консультации!
           </li>
         </ul>
       </div>
     </section>
     <section class="types" id="types">
       <div class="types__container">
-        <h3 class="types__title">Виды велосипедов</h3>
+        <h2 class="types__title">Виды велосипедов</h2>
         <div class="types__inner">
           <a href="#">
             <div class="types__item">
@@ -79,11 +86,11 @@
                 <source type="image/webp" media="(max-width: 1023px)"
                   srcset="img/roadbike-mobile@1x.webp 1x, img/roadbike-mobile@2x.webp 2x">
                 <source type="image/webp" srcset="img/roadbike-desktop@1x.webp 1x, img/roadbike-desktop@2x.webp 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
+                <!-- 1х: 270px; 2x: 540px -->
                 <source media="(max-width: 1023px)"
                   srcset="img/roadbike-mobile@1x.jpg 1x, img/roadbike-mobile@2x.jpg 2x">
-                  <!-- 1x: 342px; 2x: 684px -->
-                <img src="img/roadbike-desktop@1x.jpg"
+                <!-- 1x: 342px; 2x: 684px -->
+                <img src="img/roadbike-desktop@1x.jpg" width="342" height="503"
                   srcset="img/roadbike-desktop@1x.jpg 1x, img/roadbike-desktop@2x.jpg 2x" alt="Дорожный велосипед">
               </picture>
               <p>Дорожный велосипед</p>
@@ -96,11 +103,11 @@
                   srcset="img/mountainbike-mobile@1x.webp 1x, img/mountainbike-mobile@2x.webp 2x">
                 <source type="image/webp"
                   srcset="img/mountainbike-desktop@1x.webp 1x, img/mountainbike-desktop@2x.webp 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
+                <!-- 1х: 270px; 2x: 540px -->
                 <source media="(max-width: 1023px)"
                   srcset="img/mountainbike-mobile@1x.jpg 1x, img/mountainbike-mobile@2x.jpg 2x">
-                  <!-- 1x: 342px; 2x: 684px -->
-                <img src="img/mountainbike-desktop@1x.jpg"
+                <!-- 1x: 342px; 2x: 684px -->
+                <img src="img/mountainbike-desktop@1x.jpg" width="342" height="566"
                   srcset="img/mountainbike-desktop@1x.jpg 1x, img/mountainbike-desktop@2x.jpg 2x"
                   alt="Горный велосипед">
               </picture>
@@ -113,11 +120,11 @@
                 <source type="image/webp" media="(max-width: 1023px)"
                   srcset="img/childbike-mobile@1x.webp 1x, img/childbike-mobile@2x.webp 2x">
                 <source type="image/webp" srcset="img/childbike-desktop@1x.webp 1x, img/childbike-desktop@2x.webp 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
+                <!-- 1х: 270px; 2x: 540px -->
                 <source media="(max-width: 1023px)"
                   srcset="img/childbike-mobile@1x.jpg 1x, img/childbike-mobile@2x.jpg 2x">
-                  <!-- 1x: 342px; 2x: 684px -->
-                <img src="img/childbike-desktop@1x.jpg"
+                <!-- 1x: 342px; 2x: 684px -->
+                <img src="img/childbike-desktop@1x.jpg" width="342" height="512.59"
                   srcset="img/childbike-desktop@1x.jpg 1x, img/childbike-desktop@2x.jpg 2x" alt="Детский велосипед">
               </picture>
               <p>Детский велосипед</p>
@@ -128,27 +135,25 @@
     </section>
     <section class="video" id="video">
       <div class="video__container">
-        <div class="video__inner">
-          <h3 class="video__title">Видео про велосипеды</h3>
-          <p class="video__about">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
-          <div class="video__content">
-            <picture>
-              <source type="image/webp" media="(max-width: 767px)"
-                srcset="img/videobg-mobile@1x.webp 1x, img/videobg-mobile@2x.webp 2x">
-              <source type="image/webp" media="(max-width: 1023px)"
-                srcset="img/videobg-tablet@1x.webp 1x, img/videobg-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/videobg-desktop@1x.webp 1x, img/videobg-desktop@2x.webp 2x">
-                <!-- 1x: 288px; 2x: 576px -->
-                <source media="(max-width: 767px)" srcset="img/videobg-mobile@1x.jpg 1x, img/videobg-mobile@2x.jpg 2x">
-                  <!-- 1x: 503px; 2x: 1006px -->
-              <source media="(max-width: 1023px)" srcset="img/videobg-tablet@1x.jpg 1x, img/videobg-tablet@2x.jpg 2x">
-                <!-- 1x: 929px; 2x: 1858px -->
-              <img src="img/videobg-desktop@1x.jpg"
-                srcset="img/videobg-desktop@1x.jpg 1x, img/videobg-desktop@2x.jpg 2x" alt="Изображения велосипеда">
-            </picture>
-            <button class="video__content-btn">
-            </button>
-          </div>
+        <h2 class="video__title">Видео про велосипеды</h2>
+        <p class="video__about">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
+        <div class="video__content">
+          <picture>
+            <source type="image/webp" media="(max-width: 767px)"
+              srcset="img/videobg-mobile@1x.webp 1x, img/videobg-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)"
+              srcset="img/videobg-tablet@1x.webp 1x, img/videobg-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/videobg-desktop@1x.webp 1x, img/videobg-desktop@2x.webp 2x">
+            <!-- 1x: 288px; 2x: 576px -->
+            <source media="(max-width: 767px)" srcset="img/videobg-mobile@1x.jpg 1x, img/videobg-mobile@2x.jpg 2x">
+            <!-- 1x: 503px; 2x: 1006px -->
+            <source media="(max-width: 1023px)" srcset="img/videobg-tablet@1x.jpg 1x, img/videobg-tablet@2x.jpg 2x">
+            <!-- 1x: 929px; 2x: 1858px -->
+            <img src="img/videobg-desktop@1x.jpg" srcset="img/videobg-desktop@1x.jpg 1x, img/videobg-desktop@2x.jpg 2x"
+              width="929" height="522" alt="Изображения велосипеда">
+          </picture>
+          <button class="video__content-btn" type="button" aria-label="Воспроизвести видео">
+          </button>
         </div>
       </div>
     </section>
@@ -160,7 +165,8 @@
           <div class="address__map">
             <iframe class="address__iframe"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.1619905955367!2d30.32084686227864!3d59.93909465282492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1601771041232!5m2!1sru!2sru"
-              width="957" height="530" title="map" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+              width="957" height="530" title="map" style="border:0;" allowfullscreen="" aria-hidden="false"
+              tabindex="0"></iframe>
           </div>
         </div>
       </div>

@@ -7,14 +7,20 @@ h1 {
   background-image: url("../img/bikebg-desktop@1x.jpg"), linear-gradient(#0d0d0d, #262626);
   background-position: center;
   background-repeat: no-repeat;
+  background-size: 100% 825px;
   font-family: "Open Sans", "Arial", sans-serif;
 }
 
 @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .header {
     background: url("../img/bikebg-desktop@2x.jpg") center no-repeat;
-    background-size: 1440px auto;
+    background-size: 100% 825px;
   }
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 .container {
@@ -26,8 +32,6 @@ h1 {
 .header__menu {
   padding-top: 21px;
   max-height: 62px;
-  margin-left: 33px;
-  margin-right: 43px;
 }
 
 .header__menu-list {
@@ -37,14 +41,15 @@ h1 {
   margin: 0;
   padding: 0;
   position: relative;
+  list-style: none;
 
   &::after {
     position: absolute;
     content: "";
-    width: 107%;
+    width: 95%;
     height: 1px;
     top: calc(100% + 9px);
-    left: -23px;
+    left: 18px;
     background-color: rgba(255, 255, 255, 0.2);
   }
 }
@@ -57,12 +62,12 @@ h1 {
   text-align: center;
   color: #ffffff;
   opacity: 0.7;
+  padding: 40px;
 }
 
 .header__inner {
   margin-top: 262px;
   margin-left: 17px;
-  width: 395px;
 }
 
 .header__inner-logo {
@@ -90,20 +95,32 @@ h1 {
 
 .header__inner-button {
   display: none;
+  border: none;
+}
+
+.header__inner-wrapper {
+  width: 395px;
+}
+
+.header__inner-wrapperlogo {
+  display: flex;
+  justify-content: space-between;
 }
 
 @media (max-width: $tablet-width) {
   .header {
     position: relative;
     min-height: 340px;
-    margin-top: 500px;
-    background-image: url("../img/bikebg-tablet@1x.jpg"), linear-gradient(#0d0d0d, #262626);
+    background-image: url("../img/bikebg-tablet@1x.jpg");
+    background-size: 100% 340px;
+    background-position: center 0;
+    margin-top: 540px;
   }
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .header {
-      background: url("../img/bikebg-tablet@2x.jpg") center no-repeat, linear-gradient(#0d0d0d, #262626);
-      background-size: 767px auto;
+      background: url("../img/bikebg-tablet@2x.jpg") center 0 no-repeat;
+      background-size: 100% 340px;
     }
   }
 
@@ -113,19 +130,24 @@ h1 {
     margin: 0;
   }
 
+  .header__wrapper {
+    display: block;
+  }
+
   .header__menu {
     display: none;
     position: absolute;
     content: "";
-    top: -500px;
     min-height: 450px;
     left: 0;
+    top: -540px;
     margin: 0;
     background-color: #ffffff;
     padding: 0;
     padding-top: 100px;
     width: 100%;
     z-index: 9;
+    max-height: 568px;
 
     &--active {
       display: block;
@@ -142,19 +164,23 @@ h1 {
     }
   }
 
-  .header__menu-item {
-    display: flex;
-    height: 60px;
-    width: 100%;
+  .header__menu-list li {
+    flex-basis: 60px;
+    margin-bottom: 30px;
     background-color: #f6f6f6;
+  }
+
+  .header__menu-item {
+    display: block;
+    height: 26px;
+    width: 100%;
     font-size: 20px;
     line-height: 28px;
     color: #48494d;
     padding-left: 16px;
     text-align: left;
-    align-items: center;
     position: relative;
-    margin-bottom: 30px;
+    padding: 17px 0 17px 16px;
 
     &::after {
       position: absolute;
@@ -206,8 +232,7 @@ h1 {
     width: 23px;
     height: 1px;
     background-color: #000000;
-    margin-top: 25px;
-    margin-left: 13.75px;
+    margin-left: 7px;
 
     &::before {
       content: "";
@@ -217,6 +242,7 @@ h1 {
       height: 1px;
       background-color: #000000;
       top: 19px;
+      left: 15px;
     }
 
     &::after {
@@ -227,12 +253,15 @@ h1 {
       height: 1px;
       background-color: #000000;
       top: 31px;
+      left: 15px;
     }
   }
 
   .header__inner-wrapper {
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    flex-direction: column;
   }
 
   .header__inner-title {
@@ -269,22 +298,25 @@ h1 {
     position: relative;
     min-height: 390px;
     min-width: 320px;
-    background-image: url("../img/bikebg-mobile@1x.jpg"), linear-gradient(#0d0d0d, #262626);
-    margin-top: 500px;
-    background-size: cover;
+    background-image: url("../img/bikebg-mobile@1x.jpg");
+    background-size: 100% 390px;
+    background-position: top;
   }
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .header {
-      background: url("../img/bikebg-mobile@2x.jpg") center no-repeat, linear-gradient(#0d0d0d, #262626);
-      background-size: cover;
+      background: url("../img/bikebg-mobile@2x.jpg") top no-repeat;
+      background-size: 100% 390px;
     }
   }
 
   .header__menu {
-    top: -500px;
     left: 0;
     width: 100%;
+  }
+
+  .container {
+    padding: 0;
   }
 
   .header__menu-list li {
@@ -294,7 +326,7 @@ h1 {
   }
 
   .header__inner-text {
-    width: 95%;
+    width: 298px;
     padding-left: 0;
     letter-spacing: -0.005em;
     margin-left: -5px;
@@ -302,9 +334,14 @@ h1 {
 
   .header__inner-logo {
     margin-bottom: 72px;
+    margin-left: 8px;
   }
 
   .header__inner-title {
     margin-left: -8px;
+  }
+
+  .header__inner-wrapper {
+    padding-left: 10px;
   }
 }
