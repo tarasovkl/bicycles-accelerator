@@ -10,9 +10,9 @@
 
 .form label {
   position: absolute;
-  top:-1000px;
-  left:-1000px;
-};
+  top: -1000px;
+  left: -1000px;
+}
 
 .form input {
   padding-left: 27px;
@@ -91,7 +91,6 @@
 
 @media (max-width: $mobile-width) {
   .form {
-    margin-top: 109px;
     max-width: 90%;
     padding-top: 0;
     margin: 109px auto 0 auto;
