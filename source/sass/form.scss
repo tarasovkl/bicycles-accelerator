@@ -4,7 +4,6 @@
   flex-direction: column;
   flex-wrap: wrap;
   max-width: 327px;
-  margin-top: -47px;
   margin-right: 15px;
 }
 
@@ -41,8 +40,7 @@
 }
 
 .form__title {
-  margin: 0;
-  margin-bottom: 20px;
+  margin: 7px 0 20px;
   font-weight: 600;
   font-size: 17px;
   line-height: 28px;
@@ -66,7 +64,7 @@
 @media (max-width: $tablet-width) {
   .form {
     max-width: 42.8%;
-    margin: 120px auto 0 auto;
+    margin: 113px auto 0 auto;
     position: relative;
     left: 0;
     top: 0;
@@ -93,7 +91,7 @@
   .form {
     max-width: 90%;
     padding-top: 0;
-    margin: 109px auto 0 auto;
+    margin: 102px auto 0 auto;
   }
 
   .form input {

@@ -18,11 +18,6 @@ h1 {
   }
 }
 
-.header__wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-
 .container {
   max-width: 930px;
   padding: 0 10px;
@@ -68,6 +63,8 @@ h1 {
 .header__inner {
   margin-top: 262px;
   margin-left: 17px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .header__inner-logo {
@@ -102,11 +99,6 @@ h1 {
   width: 395px;
 }
 
-.header__inner-wrapperlogo {
-  display: flex;
-  justify-content: space-between;
-}
-
 @media (max-width: $tablet-width) {
   .header {
     position: relative;
@@ -128,10 +120,6 @@ h1 {
     max-width: 1023px;
     padding-right: 0;
     margin: 0;
-  }
-
-  .header__wrapper {
-    display: block;
   }
 
   .header__menu {
@@ -212,7 +200,8 @@ h1 {
 
   .header__inner-button {
     display: block;
-    position: relative;
+    position: absolute;
+    left: calc(100% - 50px);
     width: 50px;
     height: 50px;
     background-color: $cyan;
@@ -235,7 +224,8 @@ h1 {
     width: 23px;
     height: 1px;
     background-color: #000000;
-    margin-left: 7px;
+    margin: 0 auto;
+    position: relative;
 
     &::before {
       content: "";
@@ -244,8 +234,8 @@ h1 {
       width: 23px;
       height: 1px;
       background-color: #000000;
-      top: 19px;
-      left: 15px;
+      top: -7px;
+      left: 0;
     }
 
     &::after {
@@ -255,8 +245,8 @@ h1 {
       width: 23px;
       height: 1px;
       background-color: #000000;
-      top: 31px;
-      left: 15px;
+      top: 7px;
+      left: 0;
     }
   }
 

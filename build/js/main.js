@@ -6,12 +6,6 @@
   var headerMenu = document.querySelector(".header__menu");
   var header = document.querySelector(".header");
 
-  /* var hideMenu = function () {
-    headerButton.classList.remove("header__inner-button--active");
-    headerButtonToggle.classList.remove("header__inner-block--active");
-    headerMenu.classList.remove("header__menu--active");
-    header.style.marginTop = "0";
-  }; */
  var resetHeader = function () {
     if (header) {
       header.style.marginTop = "0";
@@ -30,9 +24,7 @@
   };
 
   resetHeader();
-
-  /* hideMenu(); */
-
+  
   var toggleMenu = function (element, selector) {
     if (element.classList.contains(selector)) {
       element.classList.remove(selector);
@@ -50,13 +42,6 @@
       } else {
         header.style.marginTop = "0"
       }
-      /* toggleMenu(header, "header--active"); */
-      /* if (header.style.marginTop == "0") {
-        header.style.marginTop == "540"
-      }
-      else {
-        header.style.marginTop == "0"
-      }; */
     })
   };
 
